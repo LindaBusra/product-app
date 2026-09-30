@@ -1,0 +1,13 @@
+.product-article {
+    padding: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+
+    h1 {
+        margin: 0;
+    }
+}
+
