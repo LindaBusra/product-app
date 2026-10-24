@@ -1,0 +1,20 @@
+.pagination {
+  display: flex;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+  margin-block: 1rem;
+
+  a {
+    padding: 0.5rem 1rem;
+    background-color: bisque;
+    text-decoration: none;
+    border-radius: 0.5rem;
+
+    &.prevButton {
+      grid-column: 1;
+    }
+    &.nextButton {
+      grid-column: 3;
+    }
+  }
+}

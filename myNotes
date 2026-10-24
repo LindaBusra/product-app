@@ -5,4 +5,41 @@ Klon prosjektet fra https://github.com/gloer/product-app
 Kjør npm i
 Lag en ny branch som du kan kalle pagination
 
+git add .
+git commit -m "Added new pages"
+git switch main
+git pull origin main
+git merge nyBrachName
+git push origin main
+
+
+*****************************************************
 API: https://dummyjson.com/products
+https://dummyjson.com/products?limit=2
+https://dummyjson.com/products?limit=2&skip=2 --->Da "skipper" den de 2 første produktene, og vi starter på produktet som har id 3.
+https://dummyjson.com/products?limit=2&skip=120
+Da "skipper" den de 120 første produktene, og vi starter på produktet som har id 121. Siden limit er 2 viser den nå kun 2 produkter. De med id 121 og 122.
+Hvis vi vil ha paginering som viser for eksempel 20 sider om gangen, kan vi dermed gjøre det ved å sende inn verdier for skip og limit for de forskjellige "sidene" i pagineringen.
+
+Side	limit	skip	URL til API
+1	20	0	https://dummyjson.com/products?limit=20&skip=0
+2	20	20	https://dummyjson.com/products?limit=20&skip=20
+3	20	40	https://dummyjson.com/products?limit=20&skip=40
+
+
+{
+  "products": [
+    { produkt-objekt },
+    { produkt-objekt }
+  ],
+  "total": 194,
+  "skip": 0,
+  "limit": 30
+}
+Først kommer det en kjempelang liste med objekter, et objekt for hvert produkt. Det er det vi har brukt til nå. Men så kommer det noe spennende helt på slutten som vi kanskje kan bruke når vi skal paginere.
+
+total - som sannsynligvis er så mange produkter som vi får fra APIet
+skip - som sannsynligvis handler om at vi for eksempel kan starte på produkt nummer 40 eller hva vi ønsker
+limit - som sannsynligvis er hvor mange produkter vi får om gangen
+
+
