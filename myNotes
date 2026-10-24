@@ -4,3 +4,5 @@ Vi tar utgangspunkt i noe ferdig kode, så vi slipper å bygge alt vi har gjort 
 Klon prosjektet fra https://github.com/gloer/product-app
 Kjør npm i
 Lag en ny branch som du kan kalle pagination
+
+API: https://dummyjson.com/products
